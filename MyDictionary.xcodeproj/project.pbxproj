@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069140F403B9463E6E718F8E /* libPods-MyDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DEF726DE45B4B564F9FEC3 /* libPods-MyDictionary.a */; };
+		88731CF5F96A959BBDAF35D5 /* libPods-MyDictionaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */; };
+		C37540083621B19B06BDACFF /* libPods-MyDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */; };
 		D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A6D1FD0F10500422693 /* AppDelegate.m */; };
 		D4485A711FD0F10500422693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A701FD0F10500422693 /* ViewController.m */; };
 		D4485A741FD0F10500422693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4485A721FD0F10500422693 /* Main.storyboard */; };
@@ -19,7 +20,8 @@
 		D45AE2641FD1053600AA89DC /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2631FD1053600AA89DC /* ActionViewController.m */; };
 		D45AE2671FD1053600AA89DC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45AE2651FD1053600AA89DC /* MainInterface.storyboard */; };
 		D45AE26B1FD1053600AA89DC /* AddWord.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D45AE2601FD1053600AA89DC /* AddWord.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E1DF6A712AEF63E0A3BA19BA /* libPods-MyDictionaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF421534185570B2028A9E68 /* libPods-MyDictionaryTests.a */; };
+		D45AE2831FD1407500AA89DC /* CLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2821FD1407500AA89DC /* CLClient.m */; };
+		D45AE2891FD1413000AA89DC /* CLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2881FD1413000AA89DC /* CLServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,9 @@
 /* Begin PBXFileReference section */
 		388BB1A92E8D9A8A0D1B3ED5 /* Pods-MyDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryTests/Pods-MyDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F2D3A3F9387808E33D39D70 /* Pods-MyDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryTests/Pods-MyDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7F5540F198D8D5F32B28D8 /* Pods-MyDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.release.xcconfig"; sourceTree = "<group>"; };
-		96DEF726DE45B4B564F9FEC3 /* libPods-MyDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4485A691FD0F10500422693 /* MyDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4485A6C1FD0F10500422693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4485A6D1FD0F10500422693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,7 +81,10 @@
 		D45AE2661FD1053600AA89DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D45AE2681FD1053600AA89DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45AE2701FD1063900AA89DC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		EF421534185570B2028A9E68 /* libPods-MyDictionaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45AE2811FD1407500AA89DC /* CLClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLClient.h; sourceTree = "<group>"; };
+		D45AE2821FD1407500AA89DC /* CLClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLClient.m; sourceTree = "<group>"; };
+		D45AE2871FD1413000AA89DC /* CLServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLServer.h; sourceTree = "<group>"; };
+		D45AE2881FD1413000AA89DC /* CLServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLServer.m; sourceTree = "<group>"; };
 		F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				069140F403B9463E6E718F8E /* libPods-MyDictionary.a in Frameworks */,
+				C37540083621B19B06BDACFF /* libPods-MyDictionary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DF6A712AEF63E0A3BA19BA /* libPods-MyDictionaryTests.a in Frameworks */,
+				88731CF5F96A959BBDAF35D5 /* libPods-MyDictionaryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +129,8 @@
 		29E5A9E1A053EC1F59D78F34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96DEF726DE45B4B564F9FEC3 /* libPods-MyDictionary.a */,
-				EF421534185570B2028A9E68 /* libPods-MyDictionaryTests.a */,
+				4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */,
+				81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 		D4485A601FD0F10500422693 = {
 			isa = PBXGroup;
 			children = (
+				D45AE27C1FD13F5300AA89DC /* Services */,
 				D4485A6B1FD0F10500422693 /* MyDictionary */,
 				D4485A871FD0F10500422693 /* MyDictionaryTests */,
 				D45AE2611FD1053600AA89DC /* AddWord */,
@@ -187,6 +194,25 @@
 				D45AE2681FD1053600AA89DC /* Info.plist */,
 			);
 			path = AddWord;
+			sourceTree = "<group>";
+		};
+		D45AE27C1FD13F5300AA89DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE27D1FD13F7B00AA89DC /* Client */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D45AE27D1FD13F7B00AA89DC /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2811FD1407500AA89DC /* CLClient.h */,
+				D45AE2821FD1407500AA89DC /* CLClient.m */,
+				D45AE2871FD1413000AA89DC /* CLServer.h */,
+				D45AE2881FD1413000AA89DC /* CLServer.m */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +357,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyDictionaryTests/Pods-MyDictionaryTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,9 +417,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,7 +472,9 @@
 				D4485A711FD0F10500422693 /* ViewController.m in Sources */,
 				D4485A771FD0F10500422693 /* MyDictionary.xcdatamodeld in Sources */,
 				D4485A7F1FD0F10500422693 /* main.m in Sources */,
+				D45AE2831FD1407500AA89DC /* CLClient.m in Sources */,
 				D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */,
+				D45AE2891FD1413000AA89DC /* CLServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

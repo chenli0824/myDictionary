@@ -3,16 +3,16 @@
 
 target 'MyDictionary' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+#   use_frameworks!
 
   # Pods for MyDictionary
-
-  target 'MyDictionaryTests' do
-    inherit! :search_paths
 	pod 'Realm'
 	pod 'ReactiveObjC'
 	pod 'SVProgressHUD'
 	pod 'AFNetworking'
+  target 'MyDictionaryTests' do
+    inherit! :search_paths
+	
     # Pods for testing
   end
 
