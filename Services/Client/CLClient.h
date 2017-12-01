@@ -10,6 +10,8 @@
 
 @interface CLClient : AFHTTPSessionManager
 
+@property (nonatomic,strong,readonly) NSURL *apiEndpoint;
+
 +(instancetype)sharedClient;
 
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(id)parameters;

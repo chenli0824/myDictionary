@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DictionaryServiceImpl.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	DictionaryServiceImpl *serviceImpl = [[DictionaryServiceImpl alloc] init];
+	[[serviceImpl searchWord:@"china"] subscribeNext:^(id  _Nullable x) {
+		NSLog(@"%@",x);
+	} error:^(NSError * _Nullable error) {
+		NSLog(@"%@",error);
+	}];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

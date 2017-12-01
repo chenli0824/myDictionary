@@ -22,6 +22,7 @@
 		D45AE26B1FD1053600AA89DC /* AddWord.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D45AE2601FD1053600AA89DC /* AddWord.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D45AE2831FD1407500AA89DC /* CLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2821FD1407500AA89DC /* CLClient.m */; };
 		D45AE2891FD1413000AA89DC /* CLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2881FD1413000AA89DC /* CLServer.m */; };
+		D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,9 @@
 		D45AE2821FD1407500AA89DC /* CLClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLClient.m; sourceTree = "<group>"; };
 		D45AE2871FD1413000AA89DC /* CLServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLServer.h; sourceTree = "<group>"; };
 		D45AE2881FD1413000AA89DC /* CLServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLServer.m; sourceTree = "<group>"; };
+		D45AE28C1FD1659700AA89DC /* DictionaryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryService.h; sourceTree = "<group>"; };
+		D45AE28D1FD165A300AA89DC /* DictionaryServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryServiceImpl.h; sourceTree = "<group>"; };
+		D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryServiceImpl.m; sourceTree = "<group>"; };
 		F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +203,7 @@
 		D45AE27C1FD13F5300AA89DC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D45AE28A1FD164FD00AA89DC /* DictionaryService */,
 				D45AE27D1FD13F7B00AA89DC /* Client */,
 			);
 			path = Services;
@@ -213,6 +218,16 @@
 				D45AE2881FD1413000AA89DC /* CLServer.m */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		D45AE28A1FD164FD00AA89DC /* DictionaryService */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE28C1FD1659700AA89DC /* DictionaryService.h */,
+				D45AE28D1FD165A300AA89DC /* DictionaryServiceImpl.h */,
+				D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */,
+			);
+			path = DictionaryService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +487,7 @@
 				D4485A711FD0F10500422693 /* ViewController.m in Sources */,
 				D4485A771FD0F10500422693 /* MyDictionary.xcdatamodeld in Sources */,
 				D4485A7F1FD0F10500422693 /* main.m in Sources */,
+				D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */,
 				D45AE2831FD1407500AA89DC /* CLClient.m in Sources */,
 				D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */,
 				D45AE2891FD1413000AA89DC /* CLServer.m in Sources */,

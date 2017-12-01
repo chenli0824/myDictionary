@@ -35,8 +35,8 @@ NSString *const BSAServerBaseWebPathComponent = @"html";
 }
 
 - (instancetype)init{
-	NSURL *apiEndpoint = [[NSURL URLWithString:BSAServerDotComBaseWebURL] URLByAppendingPathComponent:BSAServerBaseWebPathComponent];
-	self = [super initWithBaseURL:[NSURL URLWithString:apiEndpoint.absoluteString]];
+	_apiEndpoint = [[NSURL URLWithString:BSAServerDotComAPIEndpoint] URLByAppendingPathComponent:BSAServerAPIEndpointPathComponent];
+	self = [super initWithBaseURL:[NSURL URLWithString:_apiEndpoint.absoluteString]];
 	if (self) {
 		self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", @"text/json" ,@"text/javascript",@"text/html;charset=UTF-8",@"text/plain", nil];
 	}
@@ -45,8 +45,19 @@ NSString *const BSAServerBaseWebPathComponent = @"html";
 }
 
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(id)parameters {
-	NSURL *URL = [self.baseURL URLByAppendingPathComponent:path];
-	NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:URL.absoluteString parameters:parameters error:nil];
+	NSURL *URL = nil;
+	if (path) {
+		URL = [self.baseURL URLByAppendingPathComponent:path];
+	}
+	else{
+		URL = self.apiEndpoint;
+	}
+
+	NSError *requestError;
+	NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:URL.absoluteString parameters:parameters error:&requestError];
+	if (requestError) {
+		NSLog(@"Request Error:%@",requestError);
+	}
 //	request.allHTTPHeaderFields = @{@"token":[GlobalData sharedInstance].loginData.token};
 //	if (NSProcessInfo.processInfo.environment[OCClientResponseLoggingEnvironmentKey] != nil) {
 //		NSData *data = request.HTTPBody;
