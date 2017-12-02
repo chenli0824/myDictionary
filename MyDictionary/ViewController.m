@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DictionaryServiceImpl.h"
+#import "SearchWord.h"
 @interface ViewController ()
 
 @end
@@ -16,12 +17,14 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	DictionaryServiceImpl *serviceImpl = [[DictionaryServiceImpl alloc] init];
-	[[serviceImpl searchWord:@"china"] subscribeNext:^(id  _Nullable x) {
-		NSLog(@"%@",x);
-	} error:^(NSError * _Nullable error) {
-		NSLog(@"%@",error);
-	}];
+//	DictionaryServiceImpl *serviceImpl = [[DictionaryServiceImpl alloc] init];
+//	[[serviceImpl searchWord:@"china"] subscribeNext:^(id _Nullable value) {
+//		NSArray *array = [MTLJSONAdapter modelsOfClass:SearchWord.class fromJSONArray:value error:nil];
+//		NSLog(@"%@",array);
+//		
+//	} error:^(NSError * _Nullable error) {
+//		NSLog(@"%@",error);
+//	}];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

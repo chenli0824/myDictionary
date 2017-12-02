@@ -7,6 +7,8 @@ target 'MyDictionary' do
 
   # Pods for MyDictionary
 	pod 'Realm'
+	pod 'Realm+JSON'
+	pod 'Mantle'
 	pod 'ReactiveObjC'
 	pod 'SVProgressHUD'
 	pod 'AFNetworking'

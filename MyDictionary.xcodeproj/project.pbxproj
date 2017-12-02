@@ -23,6 +23,12 @@
 		D45AE2831FD1407500AA89DC /* CLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2821FD1407500AA89DC /* CLClient.m */; };
 		D45AE2891FD1413000AA89DC /* CLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2881FD1413000AA89DC /* CLServer.m */; };
 		D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */; };
+		D45AE2991FD1B08A00AA89DC /* SearchWordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2981FD1B08A00AA89DC /* SearchWordViewModel.m */; };
+		D45AE2A11FD25B6D00AA89DC /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A01FD25B6D00AA89DC /* CLViewController.m */; };
+		D45AE2A41FD25BE300AA89DC /* SearchWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A31FD25BE300AA89DC /* SearchWordViewController.m */; };
+		D45AE2A91FD25C4600AA89DC /* SearchWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */; };
+		D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2AF1FD2712100AA89DC /* SearchWord.m */; };
+		D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B31FD27731003D84E1 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +95,19 @@
 		D45AE28C1FD1659700AA89DC /* DictionaryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryService.h; sourceTree = "<group>"; };
 		D45AE28D1FD165A300AA89DC /* DictionaryServiceImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryServiceImpl.h; sourceTree = "<group>"; };
 		D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryServiceImpl.m; sourceTree = "<group>"; };
+		D45AE2971FD1B08A00AA89DC /* SearchWordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWordViewModel.h; sourceTree = "<group>"; };
+		D45AE2981FD1B08A00AA89DC /* SearchWordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWordViewModel.m; sourceTree = "<group>"; };
+		D45AE29E1FD25B4F00AA89DC /* BaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		D45AE29F1FD25B6D00AA89DC /* CLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
+		D45AE2A01FD25B6D00AA89DC /* CLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
+		D45AE2A21FD25BE300AA89DC /* SearchWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWordViewController.h; sourceTree = "<group>"; };
+		D45AE2A31FD25BE300AA89DC /* SearchWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWordViewController.m; sourceTree = "<group>"; };
+		D45AE2A71FD25C4600AA89DC /* SearchWordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWordCell.h; sourceTree = "<group>"; };
+		D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWordCell.m; sourceTree = "<group>"; };
+		D45AE2AE1FD2712100AA89DC /* SearchWord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWord.h; sourceTree = "<group>"; };
+		D45AE2AF1FD2712100AA89DC /* SearchWord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWord.m; sourceTree = "<group>"; };
+		D4F032B21FD27731003D84E1 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		D4F032B31FD27731003D84E1 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +161,10 @@
 		D4485A601FD0F10500422693 = {
 			isa = PBXGroup;
 			children = (
+				D45AE2AA1FD25C5400AA89DC /* Models */,
+				D45AE2A51FD25C0C00AA89DC /* Views */,
+				D45AE2941FD1B05300AA89DC /* Controllers */,
+				D45AE2931FD1B03900AA89DC /* ViewModels */,
 				D45AE27C1FD13F5300AA89DC /* Services */,
 				D4485A6B1FD0F10500422693 /* MyDictionary */,
 				D4485A871FD0F10500422693 /* MyDictionaryTests */,
@@ -228,6 +251,87 @@
 				D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */,
 			);
 			path = DictionaryService;
+			sourceTree = "<group>";
+		};
+		D45AE2931FD1B03900AA89DC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2951FD1B05D00AA89DC /* SearchWordViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D45AE2941FD1B05300AA89DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4F032B11FD27711003D84E1 /* TabBarViewController */,
+				D45AE29D1FD25B1100AA89DC /* BaseController */,
+				D45AE2961FD1B06F00AA89DC /* SearchWordController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D45AE2951FD1B05D00AA89DC /* SearchWordViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2971FD1B08A00AA89DC /* SearchWordViewModel.h */,
+				D45AE2981FD1B08A00AA89DC /* SearchWordViewModel.m */,
+			);
+			path = SearchWordViewModel;
+			sourceTree = "<group>";
+		};
+		D45AE2961FD1B06F00AA89DC /* SearchWordController */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2A21FD25BE300AA89DC /* SearchWordViewController.h */,
+				D45AE2A31FD25BE300AA89DC /* SearchWordViewController.m */,
+			);
+			path = SearchWordController;
+			sourceTree = "<group>";
+		};
+		D45AE29D1FD25B1100AA89DC /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE29E1FD25B4F00AA89DC /* BaseController.h */,
+				D45AE29F1FD25B6D00AA89DC /* CLViewController.h */,
+				D45AE2A01FD25B6D00AA89DC /* CLViewController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		D45AE2A51FD25C0C00AA89DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2A61FD25C1200AA89DC /* SearchWord */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D45AE2A61FD25C1200AA89DC /* SearchWord */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2A71FD25C4600AA89DC /* SearchWordCell.h */,
+				D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */,
+			);
+			path = SearchWord;
+			sourceTree = "<group>";
+		};
+		D45AE2AA1FD25C5400AA89DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D45AE2AE1FD2712100AA89DC /* SearchWord.h */,
+				D45AE2AF1FD2712100AA89DC /* SearchWord.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4F032B11FD27711003D84E1 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4F032B21FD27731003D84E1 /* TabBarViewController.h */,
+				D4F032B31FD27731003D84E1 /* TabBarViewController.m */,
+			);
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,12 +588,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45AE2A41FD25BE300AA89DC /* SearchWordViewController.m in Sources */,
 				D4485A711FD0F10500422693 /* ViewController.m in Sources */,
+				D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */,
 				D4485A771FD0F10500422693 /* MyDictionary.xcdatamodeld in Sources */,
 				D4485A7F1FD0F10500422693 /* main.m in Sources */,
 				D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */,
+				D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */,
+				D45AE2A91FD25C4600AA89DC /* SearchWordCell.m in Sources */,
+				D45AE2A11FD25B6D00AA89DC /* CLViewController.m in Sources */,
 				D45AE2831FD1407500AA89DC /* CLClient.m in Sources */,
 				D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */,
+				D45AE2991FD1B08A00AA89DC /* SearchWordViewModel.m in Sources */,
 				D45AE2891FD1413000AA89DC /* CLServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
