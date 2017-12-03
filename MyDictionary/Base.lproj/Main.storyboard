@@ -151,6 +151,35 @@
             </objects>
             <point key="canvasLocation" x="1989.5999999999999" y="-4.0479760119940034"/>
         </scene>
+        <!--Word Detail View Controller-->
+        <scene sceneID="yb6-XM-WQI">
+            <objects>
+                <viewController storyboardIdentifier="WordDetailViewController" hidesBottomBarWhenPushed="YES" id="eUT-BT-8BP" customClass="WordDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hp-Jo-mnG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iK7-CU-ZMr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iK7-CU-ZMr" firstAttribute="bottom" secondItem="5A5-y5-UXe" secondAttribute="bottom" id="2vE-PH-fn5"/>
+                            <constraint firstItem="iK7-CU-ZMr" firstAttribute="trailing" secondItem="5A5-y5-UXe" secondAttribute="trailing" id="5m4-gx-LjB"/>
+                            <constraint firstItem="iK7-CU-ZMr" firstAttribute="top" secondItem="5A5-y5-UXe" secondAttribute="top" id="HoU-1K-60y"/>
+                            <constraint firstItem="iK7-CU-ZMr" firstAttribute="leading" secondItem="5A5-y5-UXe" secondAttribute="leading" id="klr-BE-VUW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5A5-y5-UXe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vNE-RS-wuP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-kR-cUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2821.5999999999999" y="-4.0479760119940034"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="KeA-Yj-mCs">
             <objects>

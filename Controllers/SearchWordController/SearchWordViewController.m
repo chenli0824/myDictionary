@@ -9,7 +9,8 @@
 #import "SearchWordViewController.h"
 #import "SearchWordCell.h"
 #import "SearchWord.h"
-
+#import "DictionaryServiceImpl.h"
+#import "WordDetailInfo.h"
 @interface SearchWordViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
@@ -20,6 +21,7 @@
 @dynamic viewModel;
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.title = @"查词";
 	self.tableView.estimatedRowHeight = 75;
 	self.tableView.rowHeight = UITableViewAutomaticDimension;
 	RAC(self.viewModel,keyWord) = self.searchField.rac_textSignal;
@@ -27,6 +29,9 @@
 	[RACObserve(self.viewModel, wordsArray) subscribeNext:^(id  _Nullable x) {
 		[self.tableView reloadData];
 	}];
+	
+	
+	
     // Do any additional setup after loading the view.
 }
 
@@ -49,6 +54,12 @@
 	}
 	cell.meansLabel.text = [meansStr copy];
 	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	SearchWord *model = self.viewModel.wordsArray[indexPath.row];
+	[self.viewModel goToWordDetailView:model];
 }
 
 - (void)didReceiveMemoryWarning {

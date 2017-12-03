@@ -9,6 +9,8 @@
 #import "SearchWordViewModel.h"
 #import "DictionaryServiceImpl.h"
 #import "SearchWord.h"
+#import "WordDetailViewModel.h"
+#import "WordDetailViewController.h"
 
 @interface SearchWordViewModel()
 @property(nonatomic,strong,readwrite) NSArray *wordsArray;
@@ -45,5 +47,11 @@
 																			fromJSONArray:array 
 																							error:nil];
 	}];
+}
+
+-(void)goToWordDetailView:(SearchWord *)model{
+	WordDetailViewModel *detailViewModel = [[WordDetailViewModel alloc] initWithService:self.serviceImpl wordModel:model];
+	WordDetailViewController *detailViewController = [[WordDetailViewController alloc] initWithStoryboard:@"Main" identifier:NSStringFromClass(WordDetailViewController.class) viewModel:detailViewModel];
+	[[self.serviceImpl getNavigationController] pushViewController:detailViewController animated:YES];
 }
 @end

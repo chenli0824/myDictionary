@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	SearchWordViewModel *viewModel = [[SearchWordViewModel alloc] initWithService:[[DictionaryServiceImpl alloc] init]];
+	SearchWordViewModel *viewModel = [[SearchWordViewModel alloc] initWithService:[[DictionaryServiceImpl alloc] initWithNavigationController:self.navigationController]];
 	SearchWordViewController *searchWordView = [[SearchWordViewController alloc] initWithStoryboard:@"Main" identifier:NSStringFromClass(SearchWordViewController.class) viewModel:viewModel];
 	self.viewControllers = @[searchWordView];
     // Do any additional setup after loading the view.

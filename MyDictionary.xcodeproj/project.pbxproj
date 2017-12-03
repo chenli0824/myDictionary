@@ -29,6 +29,12 @@
 		D45AE2A91FD25C4600AA89DC /* SearchWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */; };
 		D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2AF1FD2712100AA89DC /* SearchWord.m */; };
 		D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B31FD27731003D84E1 /* TabBarViewController.m */; };
+		D4F032B71FD2861B003D84E1 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B61FD2861B003D84E1 /* BaseInfo.m */; };
+		D4F032BA1FD2FE6E003D84E1 /* WordDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */; };
+		D4F032BD1FD30B30003D84E1 /* Stemsaffixes.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032BC1FD30B30003D84E1 /* Stemsaffixes.m */; };
+		D4F032C11FD39FEB003D84E1 /* StemsaffixesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032C01FD39FEB003D84E1 /* StemsaffixesCell.m */; };
+		D4F032C51FD3A0FC003D84E1 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032C41FD3A0FC003D84E1 /* WordDetailViewController.m */; };
+		D4F032C91FD3A203003D84E1 /* WordDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032C81FD3A203003D84E1 /* WordDetailViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,18 @@
 		D45AE2AF1FD2712100AA89DC /* SearchWord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWord.m; sourceTree = "<group>"; };
 		D4F032B21FD27731003D84E1 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		D4F032B31FD27731003D84E1 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		D4F032B51FD2861B003D84E1 /* BaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfo.h; sourceTree = "<group>"; };
+		D4F032B61FD2861B003D84E1 /* BaseInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseInfo.m; sourceTree = "<group>"; };
+		D4F032B81FD2FE6E003D84E1 /* WordDetailInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailInfo.h; sourceTree = "<group>"; };
+		D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailInfo.m; sourceTree = "<group>"; };
+		D4F032BB1FD30B30003D84E1 /* Stemsaffixes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stemsaffixes.h; sourceTree = "<group>"; };
+		D4F032BC1FD30B30003D84E1 /* Stemsaffixes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stemsaffixes.m; sourceTree = "<group>"; };
+		D4F032BF1FD39FEB003D84E1 /* StemsaffixesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StemsaffixesCell.h; sourceTree = "<group>"; };
+		D4F032C01FD39FEB003D84E1 /* StemsaffixesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StemsaffixesCell.m; sourceTree = "<group>"; };
+		D4F032C31FD3A0FC003D84E1 /* WordDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
+		D4F032C41FD3A0FC003D84E1 /* WordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
+		D4F032C71FD3A203003D84E1 /* WordDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailViewModel.h; sourceTree = "<group>"; };
+		D4F032C81FD3A203003D84E1 /* WordDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewModel.m; sourceTree = "<group>"; };
 		F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,6 +274,7 @@
 		D45AE2931FD1B03900AA89DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D4F032C61FD3A1E6003D84E1 /* WordDetailViewModel */,
 				D45AE2951FD1B05D00AA89DC /* SearchWordViewModel */,
 			);
 			path = ViewModels;
@@ -264,6 +283,7 @@
 		D45AE2941FD1B05300AA89DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4F032C21FD3A0DE003D84E1 /* WordDetailViewController */,
 				D4F032B11FD27711003D84E1 /* TabBarViewController */,
 				D45AE29D1FD25B1100AA89DC /* BaseController */,
 				D45AE2961FD1B06F00AA89DC /* SearchWordController */,
@@ -302,6 +322,7 @@
 		D45AE2A51FD25C0C00AA89DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D4F032BE1FD39FC7003D84E1 /* WordDetail */,
 				D45AE2A61FD25C1200AA89DC /* SearchWord */,
 			);
 			path = Views;
@@ -321,6 +342,12 @@
 			children = (
 				D45AE2AE1FD2712100AA89DC /* SearchWord.h */,
 				D45AE2AF1FD2712100AA89DC /* SearchWord.m */,
+				D4F032B51FD2861B003D84E1 /* BaseInfo.h */,
+				D4F032B61FD2861B003D84E1 /* BaseInfo.m */,
+				D4F032B81FD2FE6E003D84E1 /* WordDetailInfo.h */,
+				D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */,
+				D4F032BB1FD30B30003D84E1 /* Stemsaffixes.h */,
+				D4F032BC1FD30B30003D84E1 /* Stemsaffixes.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +359,33 @@
 				D4F032B31FD27731003D84E1 /* TabBarViewController.m */,
 			);
 			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		D4F032BE1FD39FC7003D84E1 /* WordDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D4F032BF1FD39FEB003D84E1 /* StemsaffixesCell.h */,
+				D4F032C01FD39FEB003D84E1 /* StemsaffixesCell.m */,
+			);
+			path = WordDetail;
+			sourceTree = "<group>";
+		};
+		D4F032C21FD3A0DE003D84E1 /* WordDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4F032C31FD3A0FC003D84E1 /* WordDetailViewController.h */,
+				D4F032C41FD3A0FC003D84E1 /* WordDetailViewController.m */,
+			);
+			path = WordDetailViewController;
+			sourceTree = "<group>";
+		};
+		D4F032C61FD3A1E6003D84E1 /* WordDetailViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4F032C71FD3A203003D84E1 /* WordDetailViewModel.h */,
+				D4F032C81FD3A203003D84E1 /* WordDetailViewModel.m */,
+			);
+			path = WordDetailViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -591,15 +645,21 @@
 				D45AE2A41FD25BE300AA89DC /* SearchWordViewController.m in Sources */,
 				D4485A711FD0F10500422693 /* ViewController.m in Sources */,
 				D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */,
+				D4F032BA1FD2FE6E003D84E1 /* WordDetailInfo.m in Sources */,
 				D4485A771FD0F10500422693 /* MyDictionary.xcdatamodeld in Sources */,
 				D4485A7F1FD0F10500422693 /* main.m in Sources */,
 				D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */,
 				D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */,
+				D4F032C11FD39FEB003D84E1 /* StemsaffixesCell.m in Sources */,
 				D45AE2A91FD25C4600AA89DC /* SearchWordCell.m in Sources */,
 				D45AE2A11FD25B6D00AA89DC /* CLViewController.m in Sources */,
 				D45AE2831FD1407500AA89DC /* CLClient.m in Sources */,
+				D4F032BD1FD30B30003D84E1 /* Stemsaffixes.m in Sources */,
+				D4F032C51FD3A0FC003D84E1 /* WordDetailViewController.m in Sources */,
 				D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */,
+				D4F032C91FD3A203003D84E1 /* WordDetailViewModel.m in Sources */,
 				D45AE2991FD1B08A00AA89DC /* SearchWordViewModel.m in Sources */,
+				D4F032B71FD2861B003D84E1 /* BaseInfo.m in Sources */,
 				D45AE2891FD1413000AA89DC /* CLServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

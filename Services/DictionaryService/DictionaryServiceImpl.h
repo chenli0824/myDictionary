@@ -10,4 +10,6 @@
 #import "DictionaryService.h"
 @interface DictionaryServiceImpl : NSObject<DictionaryService>
 
+-(instancetype)initWithNavigationController:(UINavigationController *)navigationControl;
+
 @end
