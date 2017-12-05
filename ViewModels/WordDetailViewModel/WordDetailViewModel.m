@@ -9,12 +9,12 @@
 #import "WordDetailViewModel.h"
 #import "DictionaryServiceImpl.h"
 #import "SearchWord.h"
-#import "WordDetailInfo.h"
 
 @interface WordDetailViewModel()
 @property(nonatomic,strong) DictionaryServiceImpl *serviceImpl;
 @property(nonatomic,strong) SearchWord *wordModel;
-@property(nonatomic,strong) WordDetailInfo *detailInfo;
+@property(nonatomic,strong,readwrite) WordDetailInfo *detailInfo;
+
 @end
 
 @implementation WordDetailViewModel
@@ -43,7 +43,13 @@
 
 -(RACSignal *)executeFetchWordDetail{
 	return [[self.serviceImpl fetchWordDetail:self.wordModel.key] doNext:^(NSDictionary *value) {
-		self.detailInfo = [MTLJSONAdapter modelOfClass:WordDetailInfo.class fromJSONDictionary:value error:nil];
+		NSError *error;
+		self.detailInfo = [MTLJSONAdapter modelOfClass:WordDetailInfo.class 
+																fromJSONDictionary:value
+																						 error:&error];
+		if (error) {
+			NSLog(@"%@",error);
+		}
 	}];
 }
 

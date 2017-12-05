@@ -18,7 +18,7 @@
 	return [NSDictionary mtl_identityPropertyMapWithModel:self];
 }
 
-+(NSValueTransformer *)word_partJSONTransformer{
-	return [MTLJSONAdapter transformerForModelPropertiesOfClass:WordValue.class];
++(NSValueTransformer *)word_partsJSONTransformer{
+	return [MTLJSONAdapter arrayTransformerWithModelClass:WordValue.class];
 }
 @end

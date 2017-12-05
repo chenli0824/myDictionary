@@ -30,10 +30,10 @@
 }
 
 +(NSValueTransformer *)exchangeJSONTransformer{
-	return [MTLJSONAdapter transformerForModelPropertiesOfClass:Exchange.class];
+	return [MTLJSONAdapter dictionaryTransformerWithModelClass:Exchange.class];
 }
 
 +(NSValueTransformer *)symbolsJSONTransformer{
-	return [MTLJSONAdapter transformerForModelPropertiesOfClass:Symbols.class];
+	return [MTLJSONAdapter arrayTransformerWithModelClass:Symbols.class];
 }
 @end

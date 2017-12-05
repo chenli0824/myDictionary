@@ -14,10 +14,10 @@
 }
 
 +(NSValueTransformer *)baesInfoJSONTransformer{
-	return [MTLJSONAdapter transformerForModelPropertiesOfClass:BaseInfo.class];
+	return [MTLJSONAdapter dictionaryTransformerWithModelClass:BaseInfo.class];
 }
 
 +(NSValueTransformer *)stems_affixesJSONTransformer{
-	return [MTLJSONAdapter transformerForModelPropertiesOfClass:Stemsaffixes.class];
+	return [MTLJSONAdapter arrayTransformerWithModelClass:Stemsaffixes.class];
 }
 @end

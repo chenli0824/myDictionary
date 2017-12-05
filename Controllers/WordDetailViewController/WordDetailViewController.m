@@ -10,6 +10,8 @@
 #import <SVProgressHUD.h>
 
 @interface WordDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -21,13 +23,32 @@
 	[[self.viewModel.fetchDetailCommand execute:nil] subscribeNext:^(id  _Nullable x) {
 		[SVProgressHUD dismiss];
 	}];
-//	[[self.viewModel.fetchDetailCommand executionSignals] subscribeNext:^(RACSignal *signal) {
-//		[SVProgressHUD show];
-//		[signal subscribeNext:^(id  _Nullable x) {
-//			[SVProgressHUD dismiss];
-//		}];
-//	}];
-    // Do any additional setup after loading the view.
+	[self bindViewModel];
+}
+
+-(void)bindViewModel{
+	@weakify(self)
+	[RACObserve(self.viewModel, detailInfo) subscribeNext:^(WordDetailInfo *model) {
+		@strongify(self)
+		if (model) {
+			[self initUI];
+		}
+	}];
+}
+
+-(void)initUI{
+	self.wordLabel.attributedText = [self wordAttributedString];
+}
+
+-(NSAttributedString *)wordAttributedString{
+	NSMutableAttributedString *wordStr = [[NSMutableAttributedString alloc] initWithString:self.viewModel.detailInfo.baesInfo.word_name attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:21]}];
+	if (self.viewModel.detailInfo.baesInfo.symbols.count>0) {
+		Symbols *symbol = self.viewModel.detailInfo.baesInfo.symbols[0];
+		NSAttributedString *phStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"  /%@/ /%@/",symbol.ph_en,symbol.ph_am] 
+																																attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]}];
+		[wordStr appendAttributedString:phStr];
+	}
+	return [wordStr copy];
 }
 
 - (void)didReceiveMemoryWarning {

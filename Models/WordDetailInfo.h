@@ -13,6 +13,6 @@
 @property (nonatomic,strong,readonly) NSString *errmsg;
 @property (nonatomic,strong,readonly) NSNumber *_word_flag;
 @property (nonatomic,strong,readonly) BaseInfo *baesInfo;
-@property (nonatomic,strong,readonly) Stemsaffixes *stems_affixes;
+@property (nonatomic,strong,readonly) NSArray<Stemsaffixes *> *stems_affixes;
 @property (nonatomic,strong,readonly) NSArray<NSString *> *exchanges;
 @end

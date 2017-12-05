@@ -40,5 +40,5 @@
 @property(nonatomic,strong,readonly) NSString *word_name;
 @property(nonatomic,strong,readonly) NSNumber *translate_type;
 @property(nonatomic,strong,readonly) Exchange *exchange;
-@property(nonatomic,strong,readonly) Symbols *symbols;
+@property(nonatomic,strong,readonly) NSArray<Symbols *> *symbols;
 @end

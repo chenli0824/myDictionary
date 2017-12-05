@@ -18,5 +18,5 @@
 @property(nonatomic,strong,readonly) NSString *type;
 @property(nonatomic,strong,readonly) NSString *type_value;
 @property(nonatomic,strong,readonly) NSString *type_exp;
-@property(nonatomic,strong,readonly) NSArray<WordValue *> *word_part;
+@property(nonatomic,strong,readonly) NSArray<WordValue *> *word_parts;
 @end
