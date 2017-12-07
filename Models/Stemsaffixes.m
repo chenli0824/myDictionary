@@ -7,9 +7,21 @@
 //
 
 #import "Stemsaffixes.h"
+
+
 @implementation WordValue
 +(NSDictionary *)JSONKeyPathsByPropertyKey{
 	return [NSDictionary mtl_identityPropertyMapWithModel:self];
+}
+@end
+
+@implementation WordPart
++(NSDictionary *)JSONKeyPathsByPropertyKey{
+	return [NSDictionary mtl_identityPropertyMapWithModel:self];
+}
+
++(NSValueTransformer *)stems_affixesJSONTransformer{
+	return [MTLJSONAdapter arrayTransformerWithModelClass:WordValue.class];
 }
 @end
 
@@ -19,6 +31,6 @@
 }
 
 +(NSValueTransformer *)word_partsJSONTransformer{
-	return [MTLJSONAdapter arrayTransformerWithModelClass:WordValue.class];
+	return [MTLJSONAdapter arrayTransformerWithModelClass:WordPart.class];
 }
 @end

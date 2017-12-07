@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class RACSignal;
 
 @protocol DictionaryService <NSObject>
 
@@ -28,5 +30,5 @@
  */
 -(RACSignal *)fetchWordDetail:(NSString *)word;
 
--(UINavigationController *)getNavigationController;
+-(UINavigationController *)getNavigationController; 
 @end

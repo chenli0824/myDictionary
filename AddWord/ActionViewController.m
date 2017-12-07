@@ -8,10 +8,17 @@
 
 #import "ActionViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-
+#import "DictionaryServiceImpl.h"
+#import "WordDetailInfo.h"
+#import "SearchWord.h"
 @interface ActionViewController ()
 
-@property(strong,nonatomic) IBOutlet UIImageView *imageView;
+//@property(strong,nonatomic) IBOutlet UIImageView *imageView;
+@property(nonatomic,strong) NSString *word;
+@property(nonatomic,strong) DictionaryServiceImpl *serviceImpl;
+@property(nonatomic,strong) WordDetailInfo *detailInfo;
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *meansLabel;
 
 @end
 
@@ -19,35 +26,77 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Get the item[s] we're handling from the extension context.
-    
-    // For example, look for an image and place it into an image view.
-    // Replace this with something appropriate for the type[s] your extension supports.
-    BOOL imageFound = NO;
-    for (NSExtensionItem *item in self.extensionContext.inputItems) {
-        for (NSItemProvider *itemProvider in item.attachments) {
-            if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeImage]) {
-                // This is an image. We'll load it, then place it in our image view.
-                __weak UIImageView *imageView = self.imageView;
-                [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeImage options:nil completionHandler:^(UIImage *image, NSError *error) {
-                    if(image) {
-                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                            [imageView setImage:image];
-                        }];
-                    }
-                }];
-                
-                imageFound = YES;
-                break;
-            }
-        }
-        
-        if (imageFound) {
-            // We only handle one image, so stop looking for more.
-            break;
-        }
-    }
+	self.serviceImpl = [[DictionaryServiceImpl alloc] init];
+	[self readWord];
+	@weakify(self)
+	[RACObserve(self, detailInfo) subscribeNext:^(id  _Nullable x) {
+		@strongify(self)
+		if (x) {
+			[self initUI];
+		}
+	}];
+}
+
+
+-(void)fetchWordDetail{
+	[[self.serviceImpl fetchWordDetail:[self.word lowercaseString]] subscribeNext:^(id  _Nullable x) {
+		NSError *error;
+		self.detailInfo = [MTLJSONAdapter modelOfClass:WordDetailInfo.class 
+																fromJSONDictionary:x
+																						 error:&error];
+		if (error) {
+			NSLog(@"%@",error);
+		}
+	}];
+}
+
+-(void)initUI{
+	self.wordLabel.attributedText = [self wordAttributedString];
+	self.meansLabel.text = [self meansString];
+}
+
+-(NSString *)meansString{
+	if(self.detailInfo.baesInfo.symbols.count == 0) return @"";
+	NSMutableString *mutableString = [NSMutableString string];
+	for (Symbols *symbolsModel in self.detailInfo.baesInfo.symbols) {
+		for (WordProperty *property in symbolsModel.parts) {
+			[mutableString appendString:[NSString stringWithFormat:@"\n%@ ",property.part]];
+			for (NSString *mean in property.means) {
+				[mutableString appendString:mean];
+			}
+		}
+	}
+	return [mutableString copy];
+}
+
+-(NSAttributedString *)wordAttributedString{
+	NSMutableAttributedString *wordStr = [[NSMutableAttributedString alloc] initWithString:self.detailInfo.baesInfo.word_name attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:21]}];
+	if (self.detailInfo.baesInfo.symbols.count>0) {
+		Symbols *symbol = self.detailInfo.baesInfo.symbols[0];
+		if (!symbol.ph_am && !symbol.ph_en ) return [wordStr copy];
+		NSAttributedString *phStr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"  /%@/ /%@/",symbol.ph_en,symbol.ph_am] 
+																																attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]}];
+		[wordStr appendAttributedString:phStr];
+	}
+	return [wordStr copy];
+}
+
+-(void)readWord{
+	if(self.extensionContext.inputItems.count == 0) return;
+	for(NSExtensionItem *item in self.extensionContext.inputItems){
+		NSLog(@"%@",item.attachments);
+		if(item.attachments.count == 0) return;
+		for(NSItemProvider *provider in item.attachments){
+			[provider loadItemForTypeIdentifier:@"public.plain-text" options:nil
+												completionHandler:^(id<NSSecureCoding>  _Nullable item, NSError * _Null_unspecified error) {
+													NSLog(@"%@",item);
+													if(!error){
+														self.word = (NSString *)item;
+														[self fetchWordDetail];
+													}
+												}];
+		}
+	}
 }
 
 - (void)didReceiveMemoryWarning {

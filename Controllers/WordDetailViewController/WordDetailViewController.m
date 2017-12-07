@@ -7,7 +7,6 @@
 //
 
 #import "WordDetailViewController.h"
-#import <SVProgressHUD.h>
 
 @interface WordDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
@@ -19,9 +18,9 @@
 @dynamic viewModel;
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[SVProgressHUD show];
+	
 	[[self.viewModel.fetchDetailCommand execute:nil] subscribeNext:^(id  _Nullable x) {
-		[SVProgressHUD dismiss];
+		
 	}];
 	[self bindViewModel];
 }

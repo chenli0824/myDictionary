@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface CLClient : AFHTTPSessionManager
 

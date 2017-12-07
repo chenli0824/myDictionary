@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		88731CF5F96A959BBDAF35D5 /* libPods-MyDictionaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */; };
-		C37540083621B19B06BDACFF /* libPods-MyDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */; };
+		235448579FAC8C6CEE5418AE /* Pods_MyDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED7C53E4B12D227D50E0853 /* Pods_MyDictionary.framework */; };
+		39A7B36ACDC2644B5109DDAD /* Pods_MyDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FF50AB356F283E17D4D9CC /* Pods_MyDictionaryTests.framework */; };
+		B1F9FECA0BFDB174B411A59F /* Pods_MyDictionary_AddWord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF61A680300340D8ECC12F35 /* Pods_MyDictionary_AddWord.framework */; };
 		D4485A6E1FD0F10500422693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A6D1FD0F10500422693 /* AppDelegate.m */; };
 		D4485A711FD0F10500422693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A701FD0F10500422693 /* ViewController.m */; };
 		D4485A741FD0F10500422693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4485A721FD0F10500422693 /* Main.storyboard */; };
@@ -28,6 +29,20 @@
 		D45AE2A41FD25BE300AA89DC /* SearchWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A31FD25BE300AA89DC /* SearchWordViewController.m */; };
 		D45AE2A91FD25C4600AA89DC /* SearchWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */; };
 		D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2AF1FD2712100AA89DC /* SearchWord.m */; };
+		D47667001FD9187500F9166A /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = D47666FF1FD9187500F9166A /* Word.m */; };
+		D4B6706D1FD79349001E1745 /* DictionaryService.h in Sources */ = {isa = PBXBuildFile; fileRef = D45AE28C1FD1659700AA89DC /* DictionaryService.h */; };
+		D4B6706E1FD79349001E1745 /* DictionaryServiceImpl.h in Sources */ = {isa = PBXBuildFile; fileRef = D45AE28D1FD165A300AA89DC /* DictionaryServiceImpl.h */; };
+		D4B6706F1FD79349001E1745 /* DictionaryServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE28E1FD165A300AA89DC /* DictionaryServiceImpl.m */; };
+		D4B670701FD793F1001E1745 /* CLClient.h in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2811FD1407500AA89DC /* CLClient.h */; };
+		D4B670711FD793F1001E1745 /* CLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2821FD1407500AA89DC /* CLClient.m */; };
+		D4B670721FD798EF001E1745 /* SearchWord.h in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2AE1FD2712100AA89DC /* SearchWord.h */; };
+		D4B670731FD798EF001E1745 /* SearchWord.m in Sources */ = {isa = PBXBuildFile; fileRef = D45AE2AF1FD2712100AA89DC /* SearchWord.m */; };
+		D4B670741FD798EF001E1745 /* BaseInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B51FD2861B003D84E1 /* BaseInfo.h */; };
+		D4B670751FD798EF001E1745 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B61FD2861B003D84E1 /* BaseInfo.m */; };
+		D4B670761FD798EF001E1745 /* WordDetailInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B81FD2FE6E003D84E1 /* WordDetailInfo.h */; };
+		D4B670771FD798EF001E1745 /* WordDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */; };
+		D4B670781FD798EF001E1745 /* Stemsaffixes.h in Sources */ = {isa = PBXBuildFile; fileRef = D4F032BB1FD30B30003D84E1 /* Stemsaffixes.h */; };
+		D4B670791FD798EF001E1745 /* Stemsaffixes.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032BC1FD30B30003D84E1 /* Stemsaffixes.m */; };
 		D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B31FD27731003D84E1 /* TabBarViewController.m */; };
 		D4F032B71FD2861B003D84E1 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B61FD2861B003D84E1 /* BaseInfo.m */; };
 		D4F032BA1FD2FE6E003D84E1 /* WordDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */; };
@@ -71,9 +86,12 @@
 /* Begin PBXFileReference section */
 		388BB1A92E8D9A8A0D1B3ED5 /* Pods-MyDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryTests/Pods-MyDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F2D3A3F9387808E33D39D70 /* Pods-MyDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryTests/Pods-MyDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D538A6274F50B275D3FA006 /* Pods-MyDictionary-AddWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary-AddWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary-AddWord/Pods-MyDictionary-AddWord.release.xcconfig"; sourceTree = "<group>"; };
+		75F5BC38D5153998EA790CE7 /* Pods-MyDictionary-AddWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary-AddWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary-AddWord/Pods-MyDictionary-AddWord.debug.xcconfig"; sourceTree = "<group>"; };
+		8EAF3876180B1515A6542B50 /* Pods-AddWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddWord/Pods-AddWord.debug.xcconfig"; sourceTree = "<group>"; };
 		8F7F5540F198D8D5F32B28D8 /* Pods-MyDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.release.xcconfig"; sourceTree = "<group>"; };
+		AED7C53E4B12D227D50E0853 /* Pods_MyDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B904F4DB07237DE511981D91 /* Pods_AddWord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddWord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4485A691FD0F10500422693 /* MyDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4485A6C1FD0F10500422693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4485A6D1FD0F10500422693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +130,10 @@
 		D45AE2A81FD25C4600AA89DC /* SearchWordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWordCell.m; sourceTree = "<group>"; };
 		D45AE2AE1FD2712100AA89DC /* SearchWord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWord.h; sourceTree = "<group>"; };
 		D45AE2AF1FD2712100AA89DC /* SearchWord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWord.m; sourceTree = "<group>"; };
+		D47666FE1FD9187500F9166A /* Word.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		D47666FF1FD9187500F9166A /* Word.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		D4C122F51FD67F24004A3F79 /* MyDictionary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDictionary.entitlements; sourceTree = "<group>"; };
+		D4C122F61FD67F6A004A3F79 /* AddWord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AddWord.entitlements; sourceTree = "<group>"; };
 		D4F032B21FD27731003D84E1 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		D4F032B31FD27731003D84E1 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		D4F032B51FD2861B003D84E1 /* BaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseInfo.h; sourceTree = "<group>"; };
@@ -126,7 +148,10 @@
 		D4F032C41FD3A0FC003D84E1 /* WordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		D4F032C71FD3A203003D84E1 /* WordDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailViewModel.h; sourceTree = "<group>"; };
 		D4F032C81FD3A203003D84E1 /* WordDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewModel.m; sourceTree = "<group>"; };
+		E0FF50AB356F283E17D4D9CC /* Pods_MyDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD271D0A3346D585580EB0B /* Pods-AddWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddWord/Pods-AddWord.release.xcconfig"; sourceTree = "<group>"; };
 		F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
+		FF61A680300340D8ECC12F35 /* Pods_MyDictionary_AddWord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDictionary_AddWord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C37540083621B19B06BDACFF /* libPods-MyDictionary.a in Frameworks */,
+				235448579FAC8C6CEE5418AE /* Pods_MyDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88731CF5F96A959BBDAF35D5 /* libPods-MyDictionaryTests.a in Frameworks */,
+				39A7B36ACDC2644B5109DDAD /* Pods_MyDictionaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F9FECA0BFDB174B411A59F /* Pods_MyDictionary_AddWord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +189,10 @@
 				8F7F5540F198D8D5F32B28D8 /* Pods-MyDictionary.release.xcconfig */,
 				3F2D3A3F9387808E33D39D70 /* Pods-MyDictionaryTests.debug.xcconfig */,
 				388BB1A92E8D9A8A0D1B3ED5 /* Pods-MyDictionaryTests.release.xcconfig */,
+				75F5BC38D5153998EA790CE7 /* Pods-MyDictionary-AddWord.debug.xcconfig */,
+				5D538A6274F50B275D3FA006 /* Pods-MyDictionary-AddWord.release.xcconfig */,
+				8EAF3876180B1515A6542B50 /* Pods-AddWord.debug.xcconfig */,
+				EBD271D0A3346D585580EB0B /* Pods-AddWord.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -170,8 +200,10 @@
 		29E5A9E1A053EC1F59D78F34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FBF18B9C8362C1243B5C2F6 /* libPods-MyDictionary.a */,
-				81B3EC4072786D9E2D9FE556 /* libPods-MyDictionaryTests.a */,
+				B904F4DB07237DE511981D91 /* Pods_AddWord.framework */,
+				AED7C53E4B12D227D50E0853 /* Pods_MyDictionary.framework */,
+				E0FF50AB356F283E17D4D9CC /* Pods_MyDictionaryTests.framework */,
+				FF61A680300340D8ECC12F35 /* Pods_MyDictionary_AddWord.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,6 +238,7 @@
 		D4485A6B1FD0F10500422693 /* MyDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				D4C122F51FD67F24004A3F79 /* MyDictionary.entitlements */,
 				D4485A6C1FD0F10500422693 /* AppDelegate.h */,
 				D4485A6D1FD0F10500422693 /* AppDelegate.m */,
 				D4485A6F1FD0F10500422693 /* ViewController.h */,
@@ -233,6 +266,7 @@
 		D45AE2611FD1053600AA89DC /* AddWord */ = {
 			isa = PBXGroup;
 			children = (
+				D4C122F61FD67F6A004A3F79 /* AddWord.entitlements */,
 				D45AE2621FD1053600AA89DC /* ActionViewController.h */,
 				D45AE2631FD1053600AA89DC /* ActionViewController.m */,
 				D45AE2651FD1053600AA89DC /* MainInterface.storyboard */,
@@ -348,6 +382,8 @@
 				D4F032B91FD2FE6E003D84E1 /* WordDetailInfo.m */,
 				D4F032BB1FD30B30003D84E1 /* Stemsaffixes.h */,
 				D4F032BC1FD30B30003D84E1 /* Stemsaffixes.m */,
+				D47666FE1FD9187500F9166A /* Word.h */,
+				D47666FF1FD9187500F9166A /* Word.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -438,9 +474,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D45AE26E1FD1053600AA89DC /* Build configuration list for PBXNativeTarget "AddWord" */;
 			buildPhases = (
+				25F410D6360B9761DCD859ED /* [CP] Check Pods Manifest.lock */,
 				D45AE25C1FD1053600AA89DC /* Sources */,
 				D45AE25D1FD1053600AA89DC /* Frameworks */,
 				D45AE25E1FD1053600AA89DC /* Resources */,
+				7830E3F0F8E5FAB52DF97F4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -463,6 +501,11 @@
 					D4485A681FD0F10500422693 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D4485A831FD0F10500422693 = {
 						CreatedOnToolsVersion = 9.1;
@@ -472,6 +515,11 @@
 					D45AE25F1FD1053600AA89DC = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -524,6 +572,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		25F410D6360B9761DCD859ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyDictionary-AddWord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6211D8573A932791000BAC68 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +630,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7830E3F0F8E5FAB52DF97F4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyDictionary-AddWord/Pods-MyDictionary-AddWord-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyDictionary-AddWord/Pods-MyDictionary-AddWord-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		965E02CC57155ED5098C4312 /* [CP] Copy Pods Resources */ = {
@@ -608,9 +692,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyDictionary/Pods-MyDictionary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm+JSON/Realm_JSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm_JSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -647,6 +742,7 @@
 				D4F032B41FD27731003D84E1 /* TabBarViewController.m in Sources */,
 				D4F032BA1FD2FE6E003D84E1 /* WordDetailInfo.m in Sources */,
 				D4485A771FD0F10500422693 /* MyDictionary.xcdatamodeld in Sources */,
+				D47667001FD9187500F9166A /* Word.m in Sources */,
 				D4485A7F1FD0F10500422693 /* main.m in Sources */,
 				D45AE28F1FD165A300AA89DC /* DictionaryServiceImpl.m in Sources */,
 				D45AE2B01FD2712100AA89DC /* SearchWord.m in Sources */,
@@ -676,6 +772,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B670721FD798EF001E1745 /* SearchWord.h in Sources */,
+				D4B670731FD798EF001E1745 /* SearchWord.m in Sources */,
+				D4B670741FD798EF001E1745 /* BaseInfo.h in Sources */,
+				D4B670751FD798EF001E1745 /* BaseInfo.m in Sources */,
+				D4B670761FD798EF001E1745 /* WordDetailInfo.h in Sources */,
+				D4B670771FD798EF001E1745 /* WordDetailInfo.m in Sources */,
+				D4B670781FD798EF001E1745 /* Stemsaffixes.h in Sources */,
+				D4B670791FD798EF001E1745 /* Stemsaffixes.m in Sources */,
+				D4B670701FD793F1001E1745 /* CLClient.h in Sources */,
+				D4B670711FD793F1001E1745 /* CLClient.m in Sources */,
+				D4B6706D1FD79349001E1745 /* DictionaryService.h in Sources */,
+				D4B6706E1FD79349001E1745 /* DictionaryServiceImpl.h in Sources */,
+				D4B6706F1FD79349001E1745 /* DictionaryServiceImpl.m in Sources */,
 				D45AE2641FD1053600AA89DC /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,10 +943,12 @@
 			baseConfigurationReference = F97ED9C9B5A3B297DEC2AB24 /* Pods-MyDictionary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyDictionary/MyDictionary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG2NZY77WU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyDictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = MyDictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenli.MyDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -850,10 +961,12 @@
 			baseConfigurationReference = 8F7F5540F198D8D5F32B28D8 /* Pods-MyDictionary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyDictionary/MyDictionary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG2NZY77WU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyDictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = MyDictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenli.MyDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -895,11 +1008,14 @@
 		};
 		D45AE26C1FD1053600AA89DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F5BC38D5153998EA790CE7 /* Pods-MyDictionary-AddWord.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AddWord/AddWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG2NZY77WU;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyDictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = AddWord/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenli.MyDictionary.AddWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -910,11 +1026,14 @@
 		};
 		D45AE26D1FD1053600AA89DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D538A6274F50B275D3FA006 /* Pods-MyDictionary-AddWord.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AddWord/AddWord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG2NZY77WU;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyDictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = AddWord/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenli.MyDictionary.AddWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
